@@ -1,0 +1,32 @@
+.info-row { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding: 32px 0; border-bottom: 1px solid var(--line); }
+.info-row > .eyebrow { padding-top: 8px; }
+.info-copy { max-width: 760px; min-width: 0; }
+.info-copy h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.2; letter-spacing: -.9px; margin: 0 0 22px; }
+.info-copy p:not(.action-note) { font-size: 18px; color: var(--muted); line-height: 1.7; margin: 0; max-width: 640px; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 4px 32px; }
+.email-link { display: inline-block; min-height: 44px; padding: 4px 0; overflow-wrap: anywhere; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 7px; }
+.email-link span { white-space: nowrap; }
+@media(max-width:800px) { .info-row { grid-template-columns: 1fr 3fr; gap: 24px; } }
+@media(max-width:600px) {
+ .info-row { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 20px 0 28px; }
+ .info-row > .eyebrow { margin: 0; padding: 0; }
+ .info-copy h2 { font-size: 27px; letter-spacing: -.6px; margin-bottom: 16px; }
+ .info-copy p:not(.action-note) { font-size: 16px; }
+ .information-page .actions { flex-direction: column; margin-top: 22px; }
+ .profile-links { gap: 0 24px; }
+}
+@media(max-width:600px) { .info-copy h2:has(.email-link) { font-size: clamp(18px,5.5vw,23px); letter-spacing: -.45px; } }
+/* Final content pass: concise information heroes and readable experience. */
+.information-page .section-hero { padding: 10px 0 26px; }
+.information-page .section-hero h1 { font-size: clamp(32px,4vw,48px); margin-bottom: 10px; }
+.information-page .lead { font-size: 21px; }
+.info-copy p + p { margin-top: 18px; }
+.info-copy h3 { margin-top: 0; font-size: 18px; }
+.experience-list { padding-left: 22px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.experience-list li + li { margin-top: 8px; }
+@media(max-width:600px) {
+ .information-page .section-hero { padding: 6px 0 20px; }
+ .information-page .lead { font-size: 18px; }
+ .information-page main { padding-top: 10px; }
+ .experience-list { font-size: 16px; }
+}

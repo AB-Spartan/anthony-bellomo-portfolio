@@ -1,0 +1,9 @@
+/* Shared navigation only; Homepage V2 and project presentation retain their styles. */
+.site-header .name { display: inline-flex; align-items: center; min-height: 44px; }
+footer div { flex-wrap: wrap; gap: 8px 24px; }
+@media (max-width: 600px) {
+ .site-header { align-items: flex-start; }
+ .site-header nav { flex-basis: 100%; justify-content: flex-start; gap: 5px; }
+ footer { align-items: flex-start; flex-direction: column; gap: 8px; }
+ footer div { gap: 4px 20px; }
+}
